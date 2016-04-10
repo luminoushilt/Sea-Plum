@@ -1,4 +1,5 @@
-(function($) {
+jQuery.noConflict();
+var seaPlum = (function($) {
     function name() {
 
     }

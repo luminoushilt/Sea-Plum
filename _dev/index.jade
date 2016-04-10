@@ -2,17 +2,23 @@ doctype html
 html(lang='en')
 	head
 		meta(charset='utf-8')
-		title Your page title here :)
+		title Sea-Plum
 		meta(name='description', content='')
 		meta(name='author', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='stylesheet', href='Assets/css/main.css')
 		link(rel='icon', type='image/png', href='Assets/img/favicon.ico')
 	body
-		.container
-			h4 Basic Page
-			p.
-				This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the a(href='//www.getskeleton.com') Skeleton documentation.
+		include Assets/includes/header.jade
+		#wrapper.container
+			h4 Sea-Plum
+			p.intro-para Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quidem expedita ea omnis laboriosam! Fuga aliquid perferendis, asperiores in, sint accusantium iste, dolorem laboriosam facilis sequi blanditiis rerum eum, dolorum minima! Mollitia ducimus aut provident, nam. Neque quae tempore ab.
+			p.intro-para Voluptatibus ipsam quo, quisquam totam. Adipisci facere, deleniti nobis earum cum atque molestiae dignissimos magnam animi obcaecati harum tempore dicta laudantium corporis amet porro quasi repellat illo mollitia, architecto reiciendis ad eum. Facilis, repellendus. Sed tempore, exercitationem quia cupiditate non.
+			p.intro-para Blanditiis praesentium quibusdam fugit sapiente necessitatibus accusamus aut eius perferendis fuga minus maiores nostrum, magnam, excepturi nesciunt. Laudantium culpa ex repellendus voluptatum eaque minima ad nulla quaerat iusto amet a, aliquam numquam tempora id mollitia ducimus, delectus! Fugiat, dolores iusto.
+			
+		include Assets/includes/footer.jade
 		
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js')		
 		script(src='Assets/js/script.js')
+		
+		
