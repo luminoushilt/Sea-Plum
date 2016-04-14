@@ -740,35 +740,20 @@ footer .container .navi li a:hover {
 }
 
 .back-to-top {
-  background-color: #4e3862;
+  background: #4e3862 url("../img/up-arrow.png") no-repeat center 43%;
   border-radius: 50%;
   cursor: pointer;
   display: block;
-  font-size: 32px;
-  padding: 5px;
   opacity: 0.25;
   position: fixed;
   right: 20px;
-  bottom: 5px;
-  height: 55px;
-  width: 55px;
-  text-align: center;
+  bottom: 10px;
+  height: 60px;
+  width: 60px;
+  text-indent: -9999px;
+  z-index: 999;
 }
 
 .back-to-top:hover {
   opacity: 1;
-}
-
-.back-to-top span {
-  color: #fff;
-  opacity: 1;
-  margin: auto;
-}
-
-@media (max-width: 767px) {
-  .back-to-top {
-    font-size: 18px;
-    height: 30px;
-    width: 30px;
-  }
 }

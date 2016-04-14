@@ -1,24 +1,13 @@
 .back-to-top
-	background-color: $purple
+	background: $purple url('../img/up-arrow.png') no-repeat center 43%
 	border-radius: 50%
 	cursor: pointer
 	display: block
-	font-size: 32px
-	padding: 5px
 	opacity: 0.25
-	+position(fixed, null 20px 5px null)
-	+size(55px)
-	text-align: center
+	+position(fixed, null 20px 10px null)
+	+size(60px)
+	text-indent: -9999px
+	z-index: 999
 
 	&:hover
 		opacity: 1
-
-	span
-		color: #fff
-		opacity: 1
-		margin: auto
-
-@media(max-width: 767px)
-	.back-to-top
-		font-size: 18px
-		+size(30px)
