@@ -4,7 +4,7 @@
 	"description": "Sea-Plum Website Sources Files",
 	"main": "index.js",
 	"scripts": {
-		"start": "parcel _dev/index.pug --open",
+		"start": "parcel _dev/index.pug --open -p 3000",
 		"build": "parcel build _dev/index.pug"
 	},
 	"repository": {
