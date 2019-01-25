@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -179,38 +180,6 @@ td, th {
   padding: 0;
 }
 
-@font-face {
-  font-family: 'Noto Sans';
-  src: url("./Assets/css/1-tools/web_fonts/notosans_regular_macroman/NotoSans-Regular-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("./Assets/css/1-tools/web_fonts/notosans_regular_macroman/NotoSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("./Assets/css/1-tools/web_fonts/notosans_regular_macroman/NotoSans-Regular-webfont.woff") format("woff"), url("./Assets/css/1-tools/web_fonts/notosans_regular_macroman/NotoSans-Regular-webfont.ttf") format("truetype"), url("./Assets/css/1-tools/web_fonts/notosans_regular_macroman/NotoSans-Regular-webfont.svg#svgSinkinSans") format("svg");
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url("./Assets/css/1-tools/web_fonts/notosans_italic_macroman/NotoSans-Italic-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("./Assets/css/1-tools/web_fonts/notosans_italic_macroman/NotoSans-Italic-webfont.eot?#iefix") format("embedded-opentype"), url("./Assets/css/1-tools/web_fonts/notosans_italic_macroman/NotoSans-Italic-webfont.woff") format("woff"), url("./Assets/css/1-tools/web_fonts/notosans_italic_macroman/NotoSans-Italic-webfont.ttf") format("truetype"), url("./Assets/css/1-tools/web_fonts/notosans_italic_macroman/NotoSans-Italic-webfont.svg#svgSinkinSans") format("svg");
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url("./Assets/css/1-tools/web_fonts/notosans_bold_macroman/NotoSans-Bold-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("./Assets/css/1-tools/web_fonts/notosans_bold_macroman/NotoSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("./Assets/css/1-tools/web_fonts/notosans_bold_macroman/NotoSans-Bold-webfont.woff") format("woff"), url("./Assets/css/1-tools/web_fonts/notosans_bold_macroman/NotoSans-Bold-webfont.ttf") format("truetype"), url("./Assets/css/1-tools/web_fonts/notosans_bold_macroman/NotoSans-Bold-webfont.svg#svgSinkinSans") format("svg");
-  /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Noto Sans';
-  src: url("./Assets/css/1-tools/web_fonts/notosans_bolditalic_macroman/NotoSans-BoldItalic-webfont.eot");
-  /* IE9 Compat Modes */
-  src: url("./Assets/css/1-tools/web_fonts/notosans_bolditalic_macroman/NotoSans-BoldItalic-webfont.eot?#iefix") format("embedded-opentype"), url("./Assets/css/1-tools/web_fonts/notosans_bolditalic_macroman/NotoSans-BoldItalic-webfont.woff") format("woff"), url("./Assets/css/1-tools/web_fonts/notosans_bolditalic_macroman/NotoSans-BoldItalic-webfont.ttf") format("truetype"), url("./Assets/css/1-tools/web_fonts/notosans_bolditalic_macroman/NotoSans-BoldItalic-webfont.svg#svgSinkinSans") format("svg");
-  /* Legacy iOS */
-}
-
 /* Base Styles */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -288,9 +257,9 @@ body {
 
 body {
   background: #fff;
-  font-size: 14px;
+  font-size: 1rem;
   line-height: 1.6;
-  font-family: "Noto Sans", "Verdana", "Geneva", sans-serif;
+  font-family: "Source Sans Pro", "Verdana", "Geneva", sans-serif;
   color: #2e2d33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
@@ -403,23 +372,27 @@ body, html {
 }
 
 .mobile-nav-toggle {
+  background-color: #4e3862;
+  border: 1px solid #1a1321;
+  border-radius: 50%;
   cursor: pointer;
   display: none;
+  padding: 20px;
   position: absolute;
   top: 10px;
   left: 10px;
-  height: 39px;
-  width: 39px;
+  height: 29px;
+  width: 29px;
   z-index: 99999;
 }
 
 .mobile-nav-toggle span, .mobile-nav-toggle span:before, .mobile-nav-toggle span:after {
-  background: #333;
+  background: #fff;
   content: "";
   display: none;
   height: 2px;
   position: relative;
-  top: 15px;
+  top: 10px;
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -429,7 +402,7 @@ body, html {
 }
 
 .mobile-nav-toggle span:after {
-  top: -17px;
+  top: -12px;
 }
 
 .mobile-nav-toggle.is-open span {
@@ -456,16 +429,13 @@ body, html {
   background-color: #4e3862;
   border-bottom: 1px solid #1a1321;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   margin: 0;
@@ -484,21 +454,17 @@ body, html {
 
 .navbar .wrapped {
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   color: #fff;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: relative;
@@ -516,14 +482,11 @@ body, html {
 
 .navbar .wrapped .navi {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-shrink: 2;
-      -ms-flex-negative: 2;
-          flex-shrink: 2;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-transition: all 0.15s ease-out 0s;
@@ -531,9 +494,8 @@ body, html {
 }
 
 .navbar .wrapped .navi li {
-  -webkit-flex-shrink: 2;
-      -ms-flex-negative: 2;
-          flex-shrink: 2;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
   line-height: normal;
   list-style: none;
   margin: 10px 0 -1px 0;
@@ -557,23 +519,132 @@ body, html {
 }
 
 .hero-img {
-  height: auto;
-  margin: 2em 0 0;
+  background-image: url("../img/Sea-Plum_Home_Hero.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 619px;
+  margin: 47px 0 0;
   max-width: 100vw;
   min-width: 320px;
-  padding: 0;
+  padding: 180px 0 0;
   position: relative;
+  text-align: center;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
 }
 
-.hero-img img {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
+.hero-img a {
+  background: #4e3862;
+  border: 1px solid #1a1321;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 22px;
+  padding: 8px 35px;
+  text-decoration: none;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+
+.hero-img a:hover {
+  background: #fff;
+  color: #4e3862;
+}
+
+@media (max-width: 767px) {
+  .mobile-nav-toggle {
+    border: none;
+    display: block;
+  }
+  .mobile-nav-toggle span, .mobile-nav-toggle span:before, .mobile-nav-toggle span:after {
+    display: block;
+  }
+  .navbar {
+    margin: 0 auto;
+    margin-max-width: 755px;
+    margin-position: absolute;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    top: -100%;
+    width: 100%;
+  }
+  .navbar.nav-open {
+    top: 0%;
+  }
+  .navbar .wrapped {
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin: 20px auto;
+    max-width: 755px;
+    padding-top: 10px;
+    position: relative;
+  }
+  .navbar .nav-logo {
+    margin-bottom: 15px;
+  }
+  .navbar .navi {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 129px;
+        flex-basis: 129px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: 5px auto !important;
+    max-width: 755px;
+  }
+  .navbar .navi li {
+    margin: 32px auto 10px;
+  }
+  .navbar .navi li a {
+    border: none;
+    text-align: center;
+  }
+  .navbar .navi li a:hover {
+    background-color: transparent !important;
+    border-left: none !important;
+    border-right: none !important;
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu-open {
+    margin-top: 240px !important;
+  }
+  .hero-img {
+    margin-top: 0;
+  }
+  .hero-img a:hover {
+    background: #4e3862;
+    color: #fff;
+  }
 }
 
 .intro-para {
   font-size: 23px;
+}
+
+@media (max-width: 767px) {
+  .container {
+    text-align: justify;
+  }
 }
 
 footer {
@@ -587,16 +658,13 @@ footer {
 
 footer .container {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 40px 0;
@@ -622,4 +690,23 @@ footer .container .navi li a {
 
 footer .container .navi li a:hover {
   color: #4e3862;
+}
+
+.back-to-top {
+  background: #4e3862 url("../img/up-arrow.png") no-repeat center 43%;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  opacity: 0.25;
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  height: 60px;
+  width: 60px;
+  text-indent: -9999px;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  opacity: 1;
 }
