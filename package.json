@@ -1,22 +1,28 @@
 {
-  "name": "Hilt-Dev-Kit",
-  "version": "1.0.2",
-  "description": "A starter project including setup for Jade, GulpJS, SASS & BroswerSync",
-  "main": "gulpfile.js",
-  "author": "Luminous Hilt (http://luminoushilt.com/)",
-  "license": "MIT",
-  "devDependencies": {
-    "browser-sync": "^2.9.11",
-    "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-image": "^1.0.5",
-    "gulp-jade": "^1.1.0",
-    "gulp-plumber": "^1.0.1",
-    "gulp-sass": "^2.1.0",
-    "gulp-uglify": "^1.4.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/luminoushilt/Hilt-Starter-Kit.git"
-  }
+	"name": "sea-plum",
+	"version": "1.0.0",
+	"description": "Sea-Plum Website Sources Files",
+	"main": "index.js",
+	"scripts": {
+		"start": "parcel _dev/index.pug --open",
+		"build": "parcel build _dev/index.pug"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/luminoushilt/Sea-Plum.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/luminoushilt/Sea-Plum/issues"
+	},
+	"homepage": "https://github.com/luminoushilt/Sea-Plum#readme",
+	"dependencies": {
+		"parcel-bundler": "^1.11.0"
+	},
+	"devDependencies": {
+		"pug": "^2.0.3",
+		"sass": "^1.16.1"
+	}
 }
