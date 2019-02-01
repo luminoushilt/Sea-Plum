@@ -8,7 +8,6 @@ body, html
 
 .mobile-nav-toggle
 	background-color: $purple
-	border: 1px solid darken($purple, 20%)
 	border-radius: 50%
 	cursor: pointer
 	display: none
@@ -17,79 +16,63 @@ body, html
 	+size(29px)
 	z-index: 99999
 
-	span, span:before, span:after
-		background: #fff
-		content: ""
+	.sp-bars
+		color: $white
+		display: inline-block
+		font-size: 25px
+		margin: 1px 0 0 3px
+
+	.nav-open
 		display: none
-		height: 2px
-		position: relative
-		top: 10px
-		+transition()
 
-	span:before
-		top: 27x
+	.sp-times
+		color: $white
+		display: none
+		font-size: 25px
+		margin: 0 0 0 5px
 
-	span:after
-		top: -12px
-
-	&.is-open span
-		background: transparent
-
-	&.is-open span:before,
-	&.is-open span:after
-		background-color: #fff
-		transform-origin: center
-		transform: rotate(45deg)
-		top: 0
-
-	&.is-open span:before
-		background-color: #fff
-		transform: rotate(-45deg)
+	.is-open
+		display: inline-block
 
 .navbar
 	background-color: $link-color
 	border-bottom: 1px solid darken($link-color, 20%)
 	display: flex
 	flex-direction: row
-	justify-content: center
+	justify-content: space-between
 	margin: 0
 	padding: 0
 	+position(absolute, 0px 0px null 0px)
 	text-align: center
 	z-index: 9999
 
-	&.nav-open
-		top: 0px
+	.nav-logo
+		align-self: flex-start
+		margin-left: 30px
+		margin-top: 6px
+		+size(40px)
 
-	.wrapped
-		align-items: center
-		color: #fff
+		img
+			max-height: $fill
+			max-width: $fill
+
+	.nav-items
+		color: $white
 		display: flex
 		flex-direction: row
-		justify-content: space-between
-		position: relative
+		flex-shrink: 2
+		justify-content: flex-end
+		margin-right: 25px
+		+transition()
 
-		.nav-logo
-			+size(40px)
-
-			img
-				max-height: $fill
-				max-width: $fill
-
-		.navi
-			display: flex
+		li
 			flex-shrink: 2
-			justify-content: space-between
-			+transition()
+			line-height: normal
+			list-style: none
+			margin: 10px 0 -1px 0
 
-			li
-				flex-shrink: 2
-				line-height: normal
-				list-style: none
-				margin: 10px 0 -1px 0
-
-				a
-					+lum-navbar(#bebebe)
+			a
+				+lum-navbar(#bebebe)
 
 .hero-img
 	background-image: url('../img/Sea-Plum_Home_Hero.jpg')
@@ -123,57 +106,38 @@ body, html
 @media (max-width: 767px)
 
 	.mobile-nav-toggle
-		border: none
 		display: block
 
-		span, span:before, span:after
-			display: block
-
 	.navbar
+		flex-direction: column
 		margin: 0 auto
-        max-width: 755px
-        +position(absolute, 0px 0px null 0px)
+		+position(absolute, 0px 0px null 0px)
 		top: -100%
-		width: $full-width
-
-		&.nav-open
-			top: 0%
-
-		.wrapped
-			align-content: center
-			display: flex
-			flex-direction: column
-			height: auto
-			justify-content: flex-end
-			margin: 20px auto
-			max-width: 755px
-			padding-top: 10px
-			position: relative
 
 		.nav-logo
-			margin-bottom: 15px
+			align-self: center
+			margin: 30px 20px 5px 0
 
-		.navi
+		.nav-items
 			display: flex
-			flex-basis: 129px
 			flex-direction: column
 			justify-content: flex-start
-			margin: 5px auto !important
-			max-width: 755px
 
 			li
-				margin: 32px auto 10px
+				margin: 10px auto
 
 				a
-					border: none
 					text-align: center
 
 					&:hover
-				        background-color: transparent !important
-				        border-left: none !important
-				        border-right: none !important
-				        color: #fff
-				        text-decoration: none
+						background-color: transparent !important
+						border-left: none !important
+						border-right: none !important
+						color: #fff
+						text-decoration: none
+
+	.nav-open
+		top: 0%
 
 	.menu-open
 		margin-top: 240px !important

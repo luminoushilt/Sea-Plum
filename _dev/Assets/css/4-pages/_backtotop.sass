@@ -1,13 +1,26 @@
 .back-to-top
-	background: $purple url('../img/up-arrow.png') no-repeat center 43%
+	background: $purple
 	border-radius: 50%
 	cursor: pointer
 	display: none
 	opacity: 0.25
 	+position(fixed, null 20px 10px null)
 	+size(60px)
-	text-indent: -9999px
+	text-align: center
 	z-index: 999
 
-	&:hover
+	&:hover, &:focus
 		opacity: 1
+
+	.sp-arrow-up
+		color: $white
+		font-size: 40px
+		transform: translateY(8px)
+
+@media (max-width: 767px)
+	.back-to-top
+		+size(40px)
+
+		.sp-arrow-up
+			font-size: 25px
+			transform: translateY(6px)
