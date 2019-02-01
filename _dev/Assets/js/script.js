@@ -1,21 +1,24 @@
 jQuery.noConflict();
 var seaPlum = (function($) {
+	var $page = $('html, body');
 
 	// Toggles Mobile Menu
 	function mobileMenu() {
 		var $menuToggle = $('.mobile-nav-toggle');
 		var $menu = $('.navbar');
 		var $site = $('header');
+		var $close = $('.sp-times');
+
 
 		$menuToggle.on('click', function() {
-			$(this).toggleClass('is-open');
+			$(this).find('.sp-bars').toggleClass('nav-open');
 			$menu.toggleClass('nav-open');
 			$site.toggleClass('menu-open');
+			$close.toggleClass('is-open');
 		});
 	}
 
 	function backToTop() {
-		var $page = $('html, body');
 		var $back2top = $('.back-to-top');
 		var duration = 300;
 
@@ -29,8 +32,6 @@ var seaPlum = (function($) {
 			var $self = $(this),
 				height = 0,
 				top = $self.scrollTop();
-
-			console.log(top);
 
 			if (top > height) {
 				if (!$back2top.is(':visible')) {
@@ -51,12 +52,11 @@ var seaPlum = (function($) {
 		anchorTags.on('click', function() {
 			if(location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 				var target = $(this.hash);
-				var page = $('html, body');
 
 				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
 
 				if(target.length) {
-					page.animate({
+					$page.animate({
 						scrollTop: target.offset().top
 					}, duration);
 					return false;

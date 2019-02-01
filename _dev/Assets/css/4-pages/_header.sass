@@ -17,34 +17,23 @@ body, html
 	+size(29px)
 	z-index: 99999
 
-	span, span:before, span:after
-		background: #fff
-		content: ""
+	.sp-bars
+		color: $white
+		display: inline-block
+		font-size: 25px
+		margin: 1px 0 0 3px
+
+	.nav-open
 		display: none
-		height: 2px
-		position: relative
-		top: 10px
-		+transition()
 
-	span:before
-		top: 27x
+	.sp-times
+		color: $white
+		display: none
+		font-size: 25px
+		margin: 0 0 0 5px
 
-	span:after
-		top: -12px
-
-	&.is-open span
-		background: transparent
-
-	&.is-open span:before,
-	&.is-open span:after
-		background-color: #fff
-		transform-origin: center
-		transform: rotate(45deg)
-		top: 0
-
-	&.is-open span:before
-		background-color: #fff
-		transform: rotate(-45deg)
+	.is-open
+		display: inline-block
 
 .navbar
 	background-color: $link-color
@@ -58,9 +47,6 @@ body, html
 	text-align: center
 	z-index: 9999
 
-	.nav-open
-		top: 0px
-
 	.nav-logo
 		align-self: flex-start
 		margin-left: 30px
@@ -71,7 +57,6 @@ body, html
 			max-width: $fill
 
 	.nav-items
-		//border: 1px dashed $white
 		color: $white
 		display: flex
 		flex-direction: row
@@ -121,57 +106,38 @@ body, html
 @media (max-width: 767px)
 
 	.mobile-nav-toggle
-		border: none
 		display: block
 
-		span, span:before, span:after
-			display: block
-
 	.navbar
+		flex-direction: column
 		margin: 0 auto
-		max-width: 755px
 		+position(absolute, 0px 0px null 0px)
 		top: -100%
-		width: $full-width
 
-		.nav-open
-			top: 0%
+		.nav-logo
+			align-self: center
+			margin: 30px 20px 5px 0
 
-		&-wrapper
-			align-content: center
+		.nav-items
 			display: flex
 			flex-direction: column
-			height: auto
-			justify-content: flex-end
-			margin: 20px auto
-			max-width: 755px
-			padding-top: 10px
-			position: relative
+			justify-content: flex-start
 
-			.nav-logo
-				margin-bottom: 15px
+			li
+				margin: 10px auto
 
-			.nav-items
-				display: flex
-				flex-basis: 129px
-				flex-direction: column
-				justify-content: flex-start
-				margin: 5px auto !important
-				max-width: 755px
+				a
+					text-align: center
 
-				li
-					margin: 32px auto 10px
+					&:hover
+						background-color: transparent !important
+						border-left: none !important
+						border-right: none !important
+						color: #fff
+						text-decoration: none
 
-					a
-						border: none
-						text-align: center
-
-						&:hover
-							background-color: transparent !important
-							border-left: none !important
-							border-right: none !important
-							color: #fff
-							text-decoration: none
+	.nav-open
+		top: 0%
 
 	.menu-open
 		margin-top: 240px !important
