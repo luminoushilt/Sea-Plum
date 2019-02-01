@@ -1,0 +1,19 @@
+include mixins
+
+header.site-header
+	.mobile-nav-toggle
+		i.fas.fa-bars.sp-bars
+		i.fas.fa-times.sp-times
+		
+	nav.navbar
+		
+		.nav-logo
+			a(href='/'): img(src='Assets/img/plum_icon.svg', alt='Sea-Plum Logo')
+			
+		+navlinks
+			
+	.hero-img
+		.title
+			h2 What is Sea-Plum?
+			
+		a(href="#wrapper") Learn More
